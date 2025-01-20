@@ -14,6 +14,7 @@ BuildRequires:  ghc9.2-compiler
 BuildRequires:  ghc9.0-compiler
 BuildRequires:  ghc8.10-compiler
 BuildRequires:  llvm12
+BuildRequires:  llvm14
 BuildRequires:  llvm15
 BuildRequires:  llvm17
 BuildRequires:  clang15
@@ -40,7 +41,7 @@ ghc-%{ghc_major} foo.hs -o foo -fllvm -pgmlc=%{_bindir}/llc-%{llvm_ver} -pgmlo=%
 %test_foo 9.10 15 "-pgmlas=clang-15"
 %test_foo 9.8 15
 %test_foo 9.6.6 15
-%test_foo 9.4 15
+%test_foo 9.4 14
 %test_foo 9.2 12
 %test_foo 9.0 12
 %test_foo 8.10 12
